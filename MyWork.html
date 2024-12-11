@@ -99,4 +99,22 @@
             link.classList.add("active");
         }
     });
+
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("img01");
+    const caption = document.getElementById("caption");
+    const images = document.querySelectorAll("img");
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            caption.innerText = img.alt;
+        });
+    });
+
+    const closeModal = document.querySelector(".close");
+    closeModal.onclick = () => {
+        modal.style.display = "none";
+    };
 </script>
