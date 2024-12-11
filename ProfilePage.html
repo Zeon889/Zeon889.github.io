@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Page - Zeon Obert</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/ProfilePict.jpg" alt="Profile Picture" />
+            <h1>Zeon Obert</h1>
+            <br />
+            <h3><a href="ProfilePage.html">Home</a></h3>
+            <h3><a href="MyWork.php">My Work</a></h3>
+            <h3><a href="Contact.html">Contact</a></h3>
+
+        </div>
+        <div class="right">
+            <div class="intro">
+
+                <h1>Zeon Obert's Portfolio</h1>
+                <p>Welcome to my portfolio! I specialize in coding and game development,<br />bringing ideas to life with precision and creativity.</p>
+                <input type="button" onclick="location.href='Contact.html'" value="Contact Me" />
+
+            </div>
+            <br />
+            <div class="information">
+                <table style="width:90%">
+                    <tr>
+                        <th style="height:50px">Get to Know Me</th>
+                        <td style="width:60%">I have been coding games for a little over 3 years, working with many different languages and platforms which allows me to adapt easily. I am currently studying towards a BA in Computer Science with a concentration of Game Design and Development.</td>
+                    </tr>
+                    <tr>
+                        <th style="height:50px">Resume</th>
+                        <td><a href='Resume.pdf' target="_blank">
+                                <input type="button" value="Resume.pdf" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+<script>
+    const links = document.querySelectorAll("a");
+
+    // Get current URL
+    const currentURL = window.location.href;
+
+    // Loop through the links and add 'active' class to the matching link
+    links.forEach(link => {
+        if (link.href === currentURL) {
+            link.classList.add("active");
+        }
+    });
+</script>
+</body>
+</html>
+

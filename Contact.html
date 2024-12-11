@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <title>Contact - Zeon Obert</title>
+    <script src="sumbit.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/ProfilePict.jpg" alt="Profile Picture" />
+            <h1>Zeon Obert</h1>
+            <br />
+            <h3><a href="ProfilePage.html">Home</a></h3>
+            <h3><a href="MyWork.php">My Work</a></h3>
+            <h3><a href="Contact.html">Contact</a></h3>
+
+        </div>
+        <div class="right">
+            <div class="Header" style="text-align:center"><h1>Contact</h1></div>
+            <table>
+                <tr>
+                    <td style="width:50px" rowspan="4"></td>
+                    <td colspan="2">
+                        <p>
+                            Hello, I hope you liked my portfolio! My name is Zeon Obert and I specialize
+                            in coding and game development.
+                        </p>
+                    </td>
+                    <td style="width:25px" rowspan="4"></td>
+                    <td rowspan="4">
+                        <form name="messageForm" action="https://mscs-php.uwstout.edu/2024FA/cs/248/002/obertm1415/messSum.php" method="post">
+                            <fieldset>
+                                <label for="name" id="nameLabel">Full name:</label>
+                                <input type="text" id="name" name="name" /> <br />
+                                <label for="email" id="emailLabel">Email:</label>
+                                <input type="email" id="email" name="email" /> <br />
+                                <label for="message" id="messageLabel">Message:</label>
+                                <input type="text" id="message" name="message" maxlength="200" /><br />
+                            </fieldset>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </form>
+                    </td>
+                    <td style="width:60px" rowspan="4"></td>
+                </tr>
+                <tr>
+                    <td style="width:30px"><img src="images/gps.png" alt="Location Icon" width="25" height="25" /></td>
+                    <td>Menomonie, WI</td>
+                </tr>
+                <tr>
+                    <td><img src="images/email.png" alt="Email Icon" width="25" height="25" /></td>
+                    <td>Obertm1415@my.uwstout.edu</td>
+                </tr>
+                <tr>
+                    <td><img src="images/linkedin.png" alt="LinkedIn Icon" width="25" height="25" /></td>
+                    <td><a href="https://www.linkedin.com/notifications/?filter=all" target="_blank" style="color:dodgerblue">LinkedIn Profile</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<script>
+    const links = document.querySelectorAll("a");
+
+    // Get current URL
+    const currentURL = window.location.href;
+
+    // Loop through the links and add 'active' class to the matching link
+    links.forEach(link => {
+        if (link.href === currentURL) {
+            link.classList.add("active");
+        }
+    });
+</script>
+</body>
+</html>
+
